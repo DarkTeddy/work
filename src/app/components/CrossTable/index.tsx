@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from 'react';
 import { Space, Switch, Table } from 'antd';
 import {cloneDeep} from 'lodash';
-import RightArrowSvg from '/public/rightArrow.svg';
 import DrillIcon from './DrillIcon';
 import CollapseIcon from './Collapse';
 import { calIndentation, collapseCount } from './tools';
