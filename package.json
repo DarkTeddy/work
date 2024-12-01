@@ -2,6 +2,7 @@
   "name": "work",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -9,18 +10,22 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ant-design/charts": "^2.2.3",
     "@ant-design/icons": "^5.5.1",
-    "@types/lodash": "^4.17.13",
     "antd": "^5.22.2",
     "lodash": "^4.17.21",
-    "next": "15.0.3",
-    "react": "19.0.0-rc-66855b96-20241106",
-    "react-dom": "19.0.0-rc-66855b96-20241106"
+    "mobx": "^6.13.5",
+    "mobx-react-lite": "^4.0.7",
+    "next": "^13.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "recoil": "^0.7.7"
   },
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "typescript": "^5"
+    "typescript": "^5",
+    "@types/lodash": "^4.17.13"
   }
 }

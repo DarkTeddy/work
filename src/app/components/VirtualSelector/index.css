@@ -1,0 +1,27 @@
+.viewport{
+    width: 100vw;
+    height: 100vh;
+    background-color: azure;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 100px;
+    height: 300px;
+    background-color: gainsboro;
+    border: black 1px solid;
+
+    overflow-y: scroll;
+    position: relative;
+}
+.inner{
+    height: 1800px;
+    width: 100%;
+    position: absolute;
+} 
+
+.fill-height{
+    height: 1800px;
+}
+  
