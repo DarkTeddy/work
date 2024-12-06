@@ -7,6 +7,7 @@ import LazyLoad from "./components/LazyLoad";
 import LineChartCase from "./components/Antv";
 import RecoilCase from "./components/Recoil";
 import Case1 from "./components/Recoil/Case1";
+import Csscase from './csscase'
 import { RecoilRoot } from "recoil";
 export default function Home() {
   return (
@@ -15,7 +16,8 @@ export default function Home() {
     // <LazyLoad />
     // <LineChartCase></LineChartCase>
     <RecoilRoot>
-      <Case1 />
+      {/* <Case1 /> */}
+      <Csscase />
     </RecoilRoot>
   );
 }

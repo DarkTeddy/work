@@ -1,0 +1,70 @@
+/* 三栏布局实现 */
+/* -------flex------- */
+/* .container{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+.left{
+    width: 200px;
+    background-color: blueviolet;
+}
+.right{
+    width: 200px;
+    background-color: red;
+}
+.middle{
+    flex: 1;
+    background-color: gold;
+} */
+
+
+/* -------position------ */
+/* .container{
+    height: 100vh;
+    position: relative;
+}
+.left{
+    height: 100%;
+    position: absolute;
+    width: 200px;
+    background-color: tan;
+    left: 0;
+}
+.right{
+    height: 100%;
+    position: absolute;
+    width: 200px;
+    background-color: aqua;
+    top: 0;
+    right: 0;
+}
+.middle{
+    height: 100%;
+    width: (100% - 400px);
+    background-color: darkgoldenrod;
+    margin: 0 200px;
+} */
+
+/* ------float------ */
+.container{
+    height: 100vh;
+}
+.left{
+    background-color: wheat;
+    width: 200px;
+    float: left;
+    height: 100%;
+}
+.right{
+    background-color: salmon;
+    width: 200px;
+    float: right;
+    height: 100%;
+}
+.middle{
+    background-color: firebrick;
+    width: calc(100% - 400px);
+    height: 100%;
+    margin-left: 200px;
+}

@@ -2,6 +2,8 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { cloneDeep, flattenDeep, groupBy, identity, isEmpty, isEqual, last, merge, orderBy, uniqBy } from 'lodash';
 import { Col, Dropdown, notification, Row, Tooltip } from "antd";
 import Icon, { SwapOutlined } from "@ant-design/icons";
+import { mergeCells } from "./utils";
+import { DimOption } from "./interface";
 
 const snapShot = new SnapShot<Array<any>, {
     positionId: any;
@@ -260,17 +262,18 @@ const BizDrillTable: CardBizComponent<BizCardDrillTableProps> = ({
             // fold
             let deleteCount = 0;
             const len = record.__idsPath[order].length;
-            for (let i = modifyPosition; i < setDataSource.length; i++) {
-                if (order === 0) {
-                    if (isEqual(record.__idsPath[order], dataSource[i].__idsPath[order].slice(0, len))) {
-                        break;
-                    } else if (
-                        !isEqual(record.__idsPath[order], dataSource[i].__idsPath[order].slice(0, len)) ||
-                        !isEqual(record.__idsPath[0], dataSource[i].__idsPath[0])
-                    ) {
+            for (let i = modifyPosition; i < dataSource.length; i++) {
+                if(order === 0){
+                    if(!isEqual(record.__idsPath[order],dataSource[i].___idsPath[order].slice(0,len))){
                         break;
                     }
+                }else if(
+                    !isEqual(record.__idsPath[order],dataSource[i].___idsPath[order].slice(0,len)) ||
+                    !isEqual(record.__idsPath[0], dataSource[i].__idsPath[0])){
+                    break;
                 }
+                    
+                
 
                 deleteCount += 1;
             }

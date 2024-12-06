@@ -1,0 +1,58 @@
+/* 两栏布局实现 */
+/* ------float实现------- */
+/* .container{
+    width: 100vw;
+    height: 100vh;
+    background-color: ghostwhite;
+}
+.left{
+    height: 100%;
+    width: 200px;
+    float: left;
+    background-color: rebeccapurple;
+}
+.right{
+    padding-left: 200px;
+    background-color: blue;
+    width: calc(100%-200px);
+    height: 100%;
+} */
+
+/* -------flex实现------- */
+/* .container{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+.container:nth-child() {
+    height: 100%;
+}
+.left{
+    width: 200px;
+    background-color: red;
+}
+.right{
+    flex: 1;
+    background-color: blue;
+} */
+
+
+/* -------相对定位和绝对定位实现------- */
+.container{
+    height: 100vh;
+    position: relative;
+}
+.left{
+    width: 200px;
+    background-color: rebeccapurple;
+    position: absolute;
+    left: 0;
+    height: 100%;
+}
+.right{
+    width: calc(100% - 200px);
+    position: absolute;
+    background-color: blue;
+    left: 200px;
+    height: 100%;
+}

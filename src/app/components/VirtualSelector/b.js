@@ -1,6 +1,3 @@
-import some from './a.js';
-import c from './c.js'
+const arr = [1,2,3]
 
-console.log(some.store.a);
-some.inc();
-console.log(some.store.a);
+console.log(arr[-1]);

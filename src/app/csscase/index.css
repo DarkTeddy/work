@@ -1,0 +1,11 @@
+.container{
+    width: 500px;
+    aspect-ratio: 1/1;
+    background-color: pink;
+}
+.child{
+    margin: auto;
+    width: 30%;
+    aspect-ratio: 1/1;
+    background-color: aqua;
+}
