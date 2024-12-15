@@ -6,8 +6,10 @@ import './index.css'
 
 export default function index() {
   return (
-    <div className='container'>
-      <div className='child'></div>
-    </div>
+    <>
+      <div className='container'>
+        henchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchanghenchang
+      </div>
+    </>
   )
 }

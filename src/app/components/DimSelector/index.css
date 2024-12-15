@@ -1,0 +1,14 @@
+.dim-container{
+    width: 600px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    white-space: nowrap;
+}
+
+.middle{
+    width: 550px;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+}
