@@ -1,0 +1,32 @@
+.div{
+    width: 100px;
+    height: 100px;
+}
+
+.divA{
+    background-color: brown;
+    position: relative;
+    top: 10px;
+    left: 10px;
+}
+
+.divB{
+    background-color: aqua;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+.divC{
+    background-color: black;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+
+.divD{
+    background-color: blue;
+    position: absolute;
+    top: 70px;
+    left: 70px;
+}

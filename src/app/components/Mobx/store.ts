@@ -1,12 +1,12 @@
-import { computed, observable } from "mobx";
+import { action, computed, observable } from "mobx";
 
 export const store = observable({
     count: 0
 })
 
-export const addCount = () => {
+export const addCount = action(() => {
     store.count++;
-}
+})
 
 export const computedCount = computed(() => {
     if(store.count === 10){
@@ -15,3 +15,4 @@ export const computedCount = computed(() => {
         return store.count + 10
     }
 })
+export const isFive = computed(() => store.count === 5)

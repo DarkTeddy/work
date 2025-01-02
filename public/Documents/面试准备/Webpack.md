@@ -15,6 +15,12 @@
   导入，难以预测；
   2、Tree-shaking类似于js的垃圾收集：分析，标记，删除；
 
+从Webpack（前端工程化）的角度对网站进行性能优化你会怎么做？
+————缩小查找范围，比如减小node_modules的查找范围，alias，extensions之类的进行配置
+————减少需要解析的文件，比如noParse来减少范围
+————thread-loader这种插件来减少使用
+    
+
 
 
 

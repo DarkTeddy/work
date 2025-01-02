@@ -12,7 +12,10 @@ import DimSelector from "./components/DimSelector";
 import ContextCase from "./components/ContextCase";
 import MobxCase from "./components/Mobx"
 import DiyEvent from "./components/DiyEvent";
+import LayerCase from "./csscase/LayerCase";
 import { RecoilRoot } from "recoil";
+import { Router } from "react-router-dom";
+import Link from "next/link";
 export default function Home() {
   return (
     // <MultiCrossTable />
@@ -25,7 +28,9 @@ export default function Home() {
       {/* <DimSelector/> */}
       {/* <ContextCase /> */}
       {/* <MobxCase /> */}
-      <DiyEvent></DiyEvent>
+      {/* <DiyEvent></DiyEvent> */}
+      {/* <LayerCase></LayerCase> */}
+      <Link href="/newrouter">新的连接</Link>
     </RecoilRoot>
   );
 }

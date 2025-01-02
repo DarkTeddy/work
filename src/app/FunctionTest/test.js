@@ -1,12 +1,8 @@
-const obj ={
-    a: 1,
+let GLOBAL_INDEX_KEY = 0;
+function getIndexKey(){
+    return GLOBAL_INDEX_KEY++;
 }
 
-Object.defineProperty(obj, 'b', {
-    get(){
-        console.log('访问b');
-        return 10;
-    }
-})
-
-console.log(Object.hasOwn(obj,'b'))
+const StateCenter = {
+    
+}
