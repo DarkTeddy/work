@@ -1,0 +1,43 @@
+.form-bg{
+    position: absolute;
+    z-index: -1;
+}
+
+.form-top-left{
+    top: -5rem;
+    left: 5rem;    
+}
+
+.form-top-right{
+    right: 0;
+    top: 10rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 20rem;
+    aspect-ratio: 446/208;
+}
+
+.form-middle-right{
+    top: 50%;
+    right: 20rem;
+}
+
+.form-bottom-left{
+    left: 0rem;
+    bottom: 0;
+    width: 30rem;
+    aspect-ratio: 760/530;
+    background-size: cover;
+}
+
+.form-bottom-right{
+
+}
+
+.form-all{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+}

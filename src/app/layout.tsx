@@ -12,6 +12,11 @@ const geistMono = localFont({
   variable: "--font-geist-mono",
   weight: "100 900",
 });
+const inconsolate = localFont({
+  src: "./fonts/Inconsolata-VariableFont_wdth,wght.ttf",
+  variable: "--font-geist-mono",
+  weight: "100 900",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -25,7 +30,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      {/* <body className={`${geistSans.variable} ${geistMono.variable}`}> */}
+      <body className={`${inconsolate.className}`}>
         {children}
       </body>
     </html>
