@@ -1,17 +1,18 @@
 'use client'
-import { Input } from 'antd'
+import { Input, InputProps } from 'antd'
 import React from 'react'
+import './index.css'
 
-interface InputAreaProps{
+interface InputAreaProps extends InputProps{
   inputTitle: string
   placeHolder: string
 }
 
-export default function index({inputTitle,placeHolder}:InputAreaProps) {
+export default function index({inputTitle,placeHolder,...rest}:InputAreaProps) {
   return (
-    <div>
+    <div  className='input-area'>
         <h4>{inputTitle}</h4>
-        <Input placeholder={placeHolder}></Input>
+        <Input placeholder={placeHolder} {...rest}></Input>
     </div>
   )
 }

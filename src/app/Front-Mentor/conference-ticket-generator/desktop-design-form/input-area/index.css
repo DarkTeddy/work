@@ -1,0 +1,13 @@
+.input-area{
+    margin-top: 1.3rem;
+
+    h4{
+        text-align: left;
+        margin-bottom: 0.35rem;
+    }
+
+    input::placeholder{
+        color: #C7C6D9;
+        /* color: red; */
+    }
+}

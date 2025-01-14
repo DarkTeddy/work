@@ -1,0 +1,21 @@
+.uploaded-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 1.2rem 0;
+}
+
+.uploaded-button{
+    display: inline-block;
+    border-radius: 0.4rem;
+    background-color: #332F52;
+    width: 5.5rem;
+    height: 1.4rem;
+    line-height: 1.4rem;
+
+    cursor: pointer;
+}
+
+.uploaded-button:hover{
+    text-decoration: underline;
+}

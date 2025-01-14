@@ -1,30 +1,36 @@
-import React from 'react'
-import Image from 'next/image'
-import Background from './background'
-import UploadAvator from './upload-avator'
-import InputArea from './input-area'
-import './index.css'
-import { Button } from 'antd'
+import React, { useState } from "react";
+import Image from "next/image";
+import Background from "./background";
+import RegisterContent from './register-content'
+import "./index.css";
+import { UserInfo } from "../types";
+import TicketContent from "./ticket-content";
 
 export default function index() {
-    return (
-        <div id='form-root'>
-            <Background />
-            <div className='form-root-content'>
-                <div className='form-title'><Image src={'/conference-ticket-generator-main/assets/images/logo-mark.svg'}
-                    alt={'svg图'}
-                    width={40}
-                    height={40} />
-                Coding Conf</div>
-                
-                <h1 style={{paddingBottom: '2rem'}}>Your Journey to Coding Conf 2025 Starts Here!</h1>
-                <h5>Secure your spot at next year's biggest coding conference.</h5>
-                <UploadAvator />
-                <InputArea inputTitle='Full Name' placeHolder=''></InputArea>
-                <InputArea inputTitle='Email Address' placeHolder='example@email.com'></InputArea>
-                <InputArea inputTitle='Github Username' placeHolder='@yourusername'></InputArea>
-                <Button>Generate My Ticket</Button>
-            </div>
-        </div>
-    )
+  const [userInfo, setUserInfo] = useState<UserInfo | undefined>({
+    avator: 'a',
+    fullName: 'lgq',
+    email: '395755698@qq.com',
+    githubUsername: '@github',
+  });
+
+  return (
+    <div id="form-root">
+      <Background />
+      <div className="form-root-content">
+      <div className="form-title">
+        <Image
+          src={"/conference-ticket-generator-main/assets/images/logo-mark.svg"}
+          alt={"svg图"}
+          width={40}
+          height={40}
+        />
+        Coding Conf
+      </div>
+      {/* {userInfo ? <TicketContent {...userInfo}/>  : <RegisterContent />} */}
+      {/* <TicketContent /> */}
+      <RegisterContent />
+      </div>
+    </div>
+  );
 }

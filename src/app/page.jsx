@@ -1,6 +1,6 @@
 'use client'
 import Image from "next/image";
-import styles from "./page.module.css";
+// import styles from "./page.module.css";
 import MultiCrossTable from "./components/CrossTable";
 import VirtualSelector from "./components/VirtualSelector";
 import LazyLoad from "./components/LazyLoad";

@@ -1,16 +1,19 @@
 #form-root {
     position: relative;
-    height: 100vh;
-    width: 100vw;
+    /* height: 100vh; */
+    /* width: 100vw; */
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
+    min-height: 100vh;
 }
 
 .form-title {
     display: inline-block;
+    margin-top: 3rem;
     /* 使div成为行内块级元素 */
     align-items: center;
 
@@ -21,7 +24,7 @@
         margin-right: 20px;
     }
 
-    padding-bottom: 10rem;
+    padding-bottom: 4rem;
 }
 
 .form-root-content {
@@ -73,4 +76,11 @@
     top: 0;
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+.root-content-button{
+    margin-top: 1.6rem;
+    background-color: #F57464;
+    border-color: #F57464;
+    margin-bottom: 3rem;
 }
