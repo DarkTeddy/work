@@ -6,6 +6,7 @@ import './index.css'
 interface InputAreaProps extends InputProps{
   inputTitle: string
   placeHolder: string
+  errMsg?: string
 }
 
 export default function index({inputTitle,placeHolder,...rest}:InputAreaProps) {

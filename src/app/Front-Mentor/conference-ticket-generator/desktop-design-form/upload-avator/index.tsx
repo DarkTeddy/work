@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./index.css";
 import {
   upload_error_filetype,
@@ -10,12 +10,18 @@ import LoadWaiting from "./load-waiting";
 import Loaded from "./loaded";
 import { Spin } from "antd";
 import IconInfo from 'public/conference-ticket-generator-main/assets/images/icon-info.svg'
+import { userinfoContext, UserInfoContextType } from "../context/userinfo-context";
 
-export default function index() {
-  const [uploadedImgURL, setUploadedImgURL] = useState<null | string>(null);
+type AvatorErrorType = {
+  avatorErrorMsg: string,
+  setAvatorErrorMsg: React.Dispatch<React.SetStateAction<string>>;
+}
+export default function index({avatorError} : {avatorError: AvatorErrorType}) {
+  const {userInfo, setUserInfo} = useContext(userinfoContext) as UserInfoContextType ;
+  // const [uploadedImgURL, setUploadedImgURL] = useState<null | string>(null);
   const [loading, setLoading] = useState(false)
   
-  const [errMsg, setErrMsg] = useState<string | undefined>(undefined);
+  const {avatorErrorMsg: errMsg, setAvatorErrorMsg: setErrMsg} = avatorError;
 
   function handleInputChange(event: React.ChangeEvent<HTMLInputElement>) {
     if (event.target.files?.[0]) {
@@ -51,8 +57,13 @@ export default function index() {
         fileReader.readAsDataURL(file);
       })
         .then((res) => {
-          setUploadedImgURL(res as string);
-          setErrMsg(undefined);
+          const result = res as string;
+          // setUploadedImgURL(result);
+          setUserInfo({
+            ...userInfo,
+            avator: result,
+          })
+          setErrMsg('');
         })
         .catch((error: Error) => {
           console.log("error", error, typeof error);
@@ -72,7 +83,10 @@ export default function index() {
       />
       <h4>Upload Avatar</h4>
       <div style={{lineHeight: loading ? '9rem' : 'normal'}} className="upload-avator-content">
-        {loading ? <Spin /> : (uploadedImgURL ? <Loaded imgURL={uploadedImgURL} reset={() => setUploadedImgURL(null)}/> : (<LoadWaiting />))}
+        {loading ? <Spin /> : (userInfo.avator ? <Loaded imgURL={userInfo.avator} reset={() => setUserInfo({
+          ...userInfo,
+          avator:'',
+        })}/> : (<LoadWaiting />))}
       </div>
       <div className={`upload-avator-notion ${errMsg ?'svg-error' : '' }`} style={{color: errMsg ? '#7F5069' : 'inherit'}}>
         {/* <img src="/conference-ticket-generator-main/assets/images/icon-info.svg" alt="" /> */}
