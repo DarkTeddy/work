@@ -1,0 +1,21 @@
+.err-msg{
+    display: flex;
+    flex-direction: row;
+    padding: 0.7rem 0;
+    width: 100%;
+
+    color: rgb(131, 63, 63);
+
+    svg{
+        flex-shrink: 0;
+        margin-right: 3px;
+        path{
+            stroke: rgb(131, 63, 63);
+            /* fill: #7F5069; */
+        }
+    }
+
+    h6{
+        flex-grow: 0;
+    }
+}

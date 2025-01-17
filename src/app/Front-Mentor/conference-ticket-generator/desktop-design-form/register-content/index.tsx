@@ -14,16 +14,18 @@ const index = () => {
   const {userInfo, setUserInfo} = useContext(userinfoContext) as UserInfoContextType;
 
   function generateTicket(){
+    console.log('函数执行了吗');
+    
     const {fullName, email, avator, githubUsername} = userInfo;
     // 验证头像合法性 在组件内验证
     // 验证Full Name
-    if(!fullName) setFullNameErrMsg('Full name can not be empty.')
+    setFullNameErrMsg(fullName ? '' : 'Full name can not be empty.')
     // 验证Email
-    const reg = /'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
-    if(!reg.test(email)) setEmailErrMsg('Please enter a valid email address.');
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zAZ0-9.-]+\.[a-zA-Z]{2,}$/;
+    setEmailErrMsg(emailRegex.test(email) ? '' : 'Please enter a valid email address.')
     // 验证Github Username
     const regex = /^@/;
-    if(!regex.test(githubUsername)) setGithubErrMsg('Please enter a valid github usernamee.')
+    setGithubErrMsg(regex.test(githubUsername) ? '' : 'Please enter a valid github usernamee.')
     
     if(!avatorErrorMsg && !fullNameErrMsg && !emailErrMsg && !githubErrMsg){
       // 跳转到路由
@@ -46,6 +48,7 @@ const index = () => {
         inputTitle="Full Name"
         placeHolder=""
         value={userInfo?.fullName}
+        errMsg={fullNameErrMsg}
       />
       
       <InputArea
@@ -57,11 +60,13 @@ const index = () => {
           ...userInfo,
           email: event.target.value,
         })}
+        errMsg={emailErrMsg}
       />
       <InputArea
         inputTitle="Github Username"
         placeHolder="@yourusername"
         value={userInfo.githubUsername}
+        errMsg={githubErrMsg}
         onChange={(event) => setUserInfo({
           ...userInfo,
           githubUsername: event.target.value,

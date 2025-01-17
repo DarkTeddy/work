@@ -55,7 +55,7 @@
 
 .svg-error{
     path{
-        stroke: #7F5069;
+        stroke: rgb(131, 63, 63);
         /* fill: #7F5069; */
     }
 }
