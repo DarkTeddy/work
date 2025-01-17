@@ -1,8 +1,11 @@
 .err-msg{
     display: flex;
     flex-direction: row;
+    
     padding: 0.7rem 0;
     width: 100%;
+    text-align: left;
+    align-items: center;
 
     color: rgb(131, 63, 63);
 
@@ -13,6 +16,7 @@
             stroke: rgb(131, 63, 63);
             /* fill: #7F5069; */
         }
+        margin-right: 5px;
     }
 
     h6{

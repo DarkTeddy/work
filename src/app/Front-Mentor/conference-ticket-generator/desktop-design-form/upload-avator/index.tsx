@@ -42,7 +42,7 @@ export default function index({avatorError} : {avatorError: AvatorErrorType}) {
 
         fileReader.onload = () => {
           const now = Date.now()
-          if(now - old >= 10000){
+          if(now - old >= 1000){
             resolve(fileReader.result);
           }else{
             setTimeout(() => resolve(fileReader.result),10000-now+old)
