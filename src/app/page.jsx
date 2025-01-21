@@ -16,11 +16,11 @@ import LayerCase from "./csscase/LayerCase";
 import { RecoilRoot } from "recoil";
 // import { Router } from "react-router-dom";
 import Link from "next/link";
-import ConferenceTicketGenerator from "./Front-Mentor/conference-ticket-generator"
+// import ConferenceTicketGenerator from "./Front-Mentor/conference-ticket-generator"
 export default function Home() {
   return (
     <RecoilRoot>
-      {<ConferenceTicketGenerator />}
+      {/* {<ConferenceTicketGenerator />} */}
     </RecoilRoot>
   );
 }

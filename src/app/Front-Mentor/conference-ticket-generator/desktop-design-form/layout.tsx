@@ -1,8 +1,17 @@
-import React from 'react'
+'use client'
+import React, { useState } from 'react'
 import Image from 'next/image'
 import Background from './background'
+import { userinfoContext } from './context/userinfo-context'
+import { UserInfo } from '../types'
 
 const Layout = ({children}: {children: React.ReactNode}) => {
+  const [userInfo, setUserInfo] = useState<UserInfo>({
+      avator: "",
+      fullName: "",
+      email: "",
+      githubUsername: "",
+    });
   return (
     <div id="form-root">
       <Background />
@@ -21,7 +30,7 @@ const Layout = ({children}: {children: React.ReactNode}) => {
         {/* {userInfo ? <TicketContent {...userInfo}/>  : <RegisterContent />} */}
         {/* <TicketContent /> */}
         <userinfoContext.Provider value={{userInfo, setUserInfo}}>
-          <RegisterContent />
+          {children}
         </userinfoContext.Provider>
       </div>
     </div>

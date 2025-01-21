@@ -1,15 +1,17 @@
 import { Button } from "antd";
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import InputArea from "../input-area";
 import UploadAvator from "../upload-avator";
 import { userinfoContext, UserInfoContextType } from "../context/userinfo-context";
 import { UserInfo } from "../../types";
+import { redirect } from "next/navigation";
 
 const index = () => {
   const [avatorErrorMsg, setAvatorErrorMsg] = useState('')
   const [fullNameErrMsg, setFullNameErrMsg] = useState('')
   const [emailErrMsg, setEmailErrMsg] = useState('')
   const [githubErrMsg, setGithubErrMsg] = useState('')
+  const [mounted, setMounted] = useState(false)
 
   const {userInfo, setUserInfo} = useContext(userinfoContext) as UserInfoContextType;
 
@@ -26,11 +28,23 @@ const index = () => {
     // 验证Github Username
     const regex = /^@/;
     setGithubErrMsg(regex.test(githubUsername) ? '' : 'Please enter a valid github usernamee.')
-    
-    if(!avatorErrorMsg && !fullNameErrMsg && !emailErrMsg && !githubErrMsg){
-      // 跳转到路由
-    }
+
+    console.log('if前')
   }
+
+  useEffect(() => {
+    if(!mounted){
+      setMounted(true)
+      return
+    }
+    //
+    if(!avatorErrorMsg && !fullNameErrMsg && !emailErrMsg && !githubErrMsg){
+      console.log(`${avatorErrorMsg}, avatorErrorMsg`, 'if里面', avatorErrorMsg, fullNameErrMsg, emailErrMsg,githubErrMsg );
+      
+      // 跳转到路由
+      redirect('/Front-Mentor/conference-ticket-generator/desktop-design-form/test')
+    }
+  },[emailErrMsg,githubErrMsg,avatorErrorMsg,fullNameErrMsg])
 
 
   return (
