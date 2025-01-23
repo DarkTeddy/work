@@ -45,7 +45,7 @@ export default function index({avatorError} : {avatorError: AvatorErrorType}) {
           if(now - old >= 1000){
             resolve(fileReader.result);
           }else{
-            setTimeout(() => resolve(fileReader.result),10000-now+old)
+            setTimeout(() => resolve(fileReader.result),1000-now+old)
           }
         };
 

@@ -9,12 +9,13 @@ const Card: React.FC<CardProps> = (props) => {
     const {fullName,avator,githubUsername} = props;
   return (
     // <PatternTicket />
-    <Image 
-    src={'/conference-ticket-generator-main/assets/images/pattern-ticket.svg'}
-    width={200}
-    height={400}
-    alt='svg'
-    />
+    // <Image 
+    // src={'/conference-ticket-generator-main/assets/images/pattern-ticket.svg'}
+    // width={200}
+    // height={400}
+    // alt='svg'
+    // />
+    <PatternTicket></PatternTicket>
   )
 }
 

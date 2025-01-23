@@ -1,0 +1,5 @@
+.linear{
+    background: linear-gradient(to right, #8E4657, #ff758c, white);
+    -webkit-background-clip: text; /* 使背景裁剪到文字内容 */
+    -webkit-text-fill-color: transparent; /* 填充文字颜色为透明 */
+}

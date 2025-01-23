@@ -1,26 +1,28 @@
 'use client'
-import React, { createContext, useContext, useState } from "react";
-import Image from "next/image";
-import Background from "./background";
+import React, { useContext, useState } from "react";
 import RegisterContent from "./register-content";
 import "./index.css";
 import { UserInfo } from "../types";
-import { userinfoContext } from "./context/userinfo-context";
+import { userinfoContext, UserInfoContextType } from "./context/userinfo-context";
+import TicketContent from "./ticket-content/page";
 
+function hasEmpty(userInfo: UserInfo){
+
+  for(const p in userInfo){
+    console.log('userInfo',p, userInfo[p as keyof UserInfo]);
+    if(!userInfo[p as keyof UserInfo]) return true;
+  }
+  return false;
+}
 export default function index() {
-  const [userInfo, setUserInfo] = useState<UserInfo>({
-    avator: "",
-    fullName: "",
-    email: "",
-    githubUsername: "",
-  });
+  const {userInfo, setUserInfo} = useContext(userinfoContext) as UserInfoContextType;
+  const [completed,setCompleted] = useState(false);
 
   return (
       
         
         <>
-                <RegisterContent />
-
+        {!completed ? <RegisterContent setFinish={setCompleted}/> : <TicketContent />}
         </>
   );
 }
