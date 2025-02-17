@@ -16,11 +16,13 @@ import LayerCase from "./csscase/LayerCase";
 import { RecoilRoot } from "recoil";
 // import { Router } from "react-router-dom";
 import Link from "next/link";
+import BentoGridMain from "./Bento-Grid-Main";
 // import ConferenceTicketGenerator from "./Front-Mentor/conference-ticket-generator"
 export default function Home() {
   return (
-    <RecoilRoot>
-      {/* {<ConferenceTicketGenerator />} */}
-    </RecoilRoot>
+    // <RecoilRoot>
+      // {/* {<ConferenceTicketGenerator />} */}
+    // </RecoilRoot>
+    <BentoGridMain />
   );
 }

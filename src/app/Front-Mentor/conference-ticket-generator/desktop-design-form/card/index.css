@@ -1,0 +1,55 @@
+.pt {
+  width: 100%;
+  aspect-ratio: 600/280;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+
+  /* background: url('../../../../../../public/conference-ticket-generator-main/assets/images/pattern-ticket.svg'); */
+  /* background: url('/public/conference-ticket-generator-main/assets/images/pattern-ticket.svg'); */
+}
+.pt-bg-svg{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.pt-left{
+  padding: 1.2rem 3rem 1.2rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  h6{
+    text-align: right;
+  }
+}
+
+.pt-right{
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 0.7rem;
+  top: 45%;
+
+  span{
+    transform: rotate(90deg);
+  }
+}
+
+.pt-left-bottom{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 1.7rem;
+
+  .upload-img-container{
+    margin-top: 0;
+  }
+}
+
+.pt-nameplate{
+  display: flex;
+  flex-direction: column;
+
+  text-align: left;
+  margin-left: 0.9rem;
+}

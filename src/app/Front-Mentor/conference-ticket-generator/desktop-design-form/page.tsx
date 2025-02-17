@@ -16,7 +16,7 @@ function hasEmpty(userInfo: UserInfo){
 }
 export default function index() {
   const {userInfo, setUserInfo} = useContext(userinfoContext) as UserInfoContextType;
-  const [completed,setCompleted] = useState(false);
+  const [completed,setCompleted] = useState(true);
 
   return (
       

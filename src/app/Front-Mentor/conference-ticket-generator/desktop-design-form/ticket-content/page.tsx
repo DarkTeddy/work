@@ -9,7 +9,7 @@ const TicketContent:React.FC = () => {
   const {fullName, email, } = userInfo;
   return (
     <>
-      <h1 style={{ paddingBottom: "2rem" }}>
+      <h1 style={{ paddingBottom: "2rem", width:'120%' }}>
         Congrats, <span className='linear'>{fullName}!</span> <br />
         Your ticket is ready.
       </h1>
